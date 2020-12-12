@@ -80,10 +80,37 @@ sudo apt-get update
 sudo apt-get install spotify-client
 ```
 
+<h4>Dropbox/h4>
 
+```
+wget "http://www.dropbox.com/download/?plat=lnx.x86_64" -O dropbox.tar.gz
+sudo tar -xvf dropbox.tar.gz -C /opt/
+sudo mv /opt/.dropbox-dist/ /opt/dropbox
+sudo ln -sf /opt/dropbox/dropboxd /usr/bin/dropbox
+echo -e '[Desktop Entry]\n Version=1.0\n Name=dropbox\n Exec=/opt/dropbox/dropboxd\n Icon=/ \n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/dropbox.desktop
 
+```
 
+<h4>Ativar filtro de ruído no microfone</h4>
+<ul>
+<li>https://diolinux.com.br/2020/06/cancelamento-de-eco-e-ruido-no-linux.html</li>
+</ul>
 
+```
+load-module module-echo-cancel aec_args="analog_gain_control=0 digital_gain_control=0" source_name=noiseless
+set-default-source noiseless
+```
+
+<h4>Ativar Alt + Tab</h4>
+<ul>
+<li>https://qastack.com.br/ubuntu/1036248/how-to-separate-opened-windows-in-alttab-switcher-in-ubuntu-18-04</li>
+</ul>
+
+Em teclado (Keyboard)
+Seção Navegação (navigation)
+Desabilitar Switch applications
+e Setar como atalho Alt + Tab
+Switch windows
 
 
 
