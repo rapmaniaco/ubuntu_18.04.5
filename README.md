@@ -58,7 +58,6 @@ sudo dpkg -i *.deb
 <h4>Kdenlive</h4>
 
 ```
-add-apt-repository ppa:kdenlive/kdenlive-stable
 sudo add-apt-repository ppa:kdenlive/kdenlive-stable
 sudo apt-get update
 sudo apt-get install kdenlive
@@ -74,11 +73,12 @@ sudo apt install gimp
 
 <h4>Spotify</h4>
 
+<ul>
+<li>https://diolinux.com.br/2019/08/como-instalar-o-spotify-no-linux.html</li>
+</ul>
+
 ```
-sudo sh -c "echo 'deb http://repository.spotify.com stable non-free' >> /etc/apt/sources.list.d/spotify.list"
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-sudo apt-get update
-sudo apt-get install spotify-client
+sudo snap install spotify
 ```
 
 <h4>Dropbox</h4>
