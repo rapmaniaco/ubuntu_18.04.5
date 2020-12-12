@@ -80,7 +80,7 @@ sudo apt-get update
 sudo apt-get install spotify-client
 ```
 
-<h4>Dropbox/h4>
+<h4>Dropbox</h4>
 
 ```
 wget "http://www.dropbox.com/download/?plat=lnx.x86_64" -O dropbox.tar.gz
