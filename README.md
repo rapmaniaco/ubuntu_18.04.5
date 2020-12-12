@@ -2,11 +2,12 @@
 
 <h4>Brave</h4>
 
+<ul>
+<li>https://www.edivaldobrito.com.br/navegador-brave-no-linux-via-snap/</li>
+</ul>
+
 ```
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-${UBUNTU_CODENAME}.list
-wget -q -O - https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install brave-browser brave-keyring
+sudo snap install brave
 ```
 
 <h4> OBS Studio</h4>
