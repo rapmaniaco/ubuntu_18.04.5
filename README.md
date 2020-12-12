@@ -55,6 +55,7 @@ sudo dpkg -i *.deb
 ```
 
 <h4>Kdenlive</h4>
+
 ```
 add-apt-repository ppa:kdenlive/kdenlive-stable
 sudo add-apt-repository ppa:kdenlive/kdenlive-stable
