@@ -63,6 +63,13 @@ sudo apt-get update
 sudo apt-get install kdenlive
 ```
 
+<p>Renderizar com GPU.</p>
+<ul>
+<li>https://www.youtube.com/watch?v=w1jGeJonIxg</li>
+</ul>
+
+
+
 <h4>Gimp</h4>
 
 ```
