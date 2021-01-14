@@ -45,6 +45,12 @@ cd dlib-master
 python setup.py install
 ```
 
+<h4>Excluir ambiente virtual</h4>
+
+```
+rmvirtualenv my_env
+```
+
 <h4>LibreOffice</h4>
 
 ```
@@ -67,7 +73,6 @@ sudo apt-get install kdenlive
 <ul>
 <li>https://www.youtube.com/watch?v=w1jGeJonIxg</li>
 </ul>
-
 
 
 <h4>Gimp</h4>
@@ -108,6 +113,18 @@ echo -e '[Desktop Entry]\n Version=1.0\n Name=dropbox\n Exec=/opt/dropbox/dropbo
 load-module module-echo-cancel aec_args="analog_gain_control=0 digital_gain_control=0" source_name=noiseless
 set-default-source noiseless
 ```
+
+<h4>Corrigir cortes no microfone</h4>
+<ul>
+<li>https://www.youtube.com/watch?v=1ORKzOr7K1o&t=75s</li>
+</ul>
+
+```
+sudo nano /etc/pulse/default.pa
+```
+
+<p>Procurar essa linha: load-module module-udev-detect</p>
+<p>Acrescentar esse comando tsched=0 na mesma.</p>
 
 <h4>Ativar Alt + Tab</h4>
 <ul>
