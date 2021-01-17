@@ -151,3 +151,12 @@ sudo apt-get update
 sudo apt-get install virtualbox
 ```
 
+<h4>Team Viewer</h4>
+<ul>
+<li>https://linuxize.com/post/how-to-install-teamviewer-on-ubuntu-18-04/</li>
+</ul>
+
+```
+wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+sudo apt install ./teamviewer_amd64.deb
+```
