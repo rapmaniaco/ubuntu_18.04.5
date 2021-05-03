@@ -160,3 +160,12 @@ sudo apt-get install virtualbox
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo apt install ./teamviewer_amd64.deb
 ```
+
+<h4>Compartilhar pastas se houver erro</h4>
+<ul>
+<li>https://qastack.com.br/ubuntu/150028/you-are-not-the-owner-message-when-trying-to-access-folder#:~:text=Est%C3%A1%20dizendo%20que%20voc%C3%AA%20n%C3%A3o,ser%20executadas%20pelo%20root%20superusu%C3%A1rio%20.</li>
+</ul>
+
+```
+sudo chown -R username /path/to/directory
+```
