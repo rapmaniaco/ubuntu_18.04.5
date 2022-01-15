@@ -18,6 +18,17 @@ sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
 sudo apt-get update
 sudo apt-get install obs-studio
 ```
+
+<h4>Audacity</h4>
+
+```
+sudo add-apt-repository ppa:audacity-team/daily
+
+sudo apt-get update
+
+sudo apt-get install audacity
+```
+
 <h4>VLC</h4>
 
 ```
@@ -139,9 +150,28 @@ echo "options snd_hda_intel power_save=0" | Sudo tee -a /etc/modprobe.d/audio_di
 </ul>
 
 ```
+sudo nano /etc/pulse/default.pa
+```
+
+adicionar no final do arquivo
+
+```
 load-module module-echo-cancel aec_args="analog_gain_control=0 digital_gain_control=0" source_name=noiseless
 set-default-source noiseless
 ```
+
+e
+
+```
+set-default-source noiseless
+```
+
+então executar o comando
+
+```
+pulseaudio -k
+```
+
 
 <h4>Corrigir cortes no microfone</h4>
 <ul>
