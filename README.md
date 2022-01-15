@@ -47,9 +47,15 @@ python setup.py install
 
 <h4>Excluir ambiente virtual</h4>
 
+Dentro do ambiente virtual, no terminal de comando, executar
+
 ```
-rmvirtualenv my_env
+deactivate
 ```
+
+Acessar **/home/edee/.local/bin/.virtualenvs** e excluir a pasta com o nome do ambiente virtual.
+
+
 
 <h4>LibreOffice</h4>
 
@@ -102,6 +108,29 @@ sudo mv /opt/.dropbox-dist/ /opt/dropbox
 sudo ln -sf /opt/dropbox/dropboxd /usr/bin/dropbox
 echo -e '[Desktop Entry]\n Version=1.0\n Name=dropbox\n Exec=/opt/dropbox/dropboxd\n Icon=/ \n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/dropbox.desktop
 
+```
+
+<h4>Estalos no som quando nenhum áudio está sendo reproduzido</h4>
+<ul>
+<li>https://www.ti-enxame.com/pt/sound/som-irritante-de-clique-estalo-no-ubuntu-20.04/997982717/</li>
+</ul>
+
+Verifique como está a placa de som power_save parâmetro:
+
+```
+    cat /sys/module/snd_hda_intel/parameters/power_save
+```
+
+Se retornar 1, faça o seguinte para alterá-lo temporariamente:
+
+```
+echo "0" | Sudo tee /sys/module/snd_hda_intel/parameters/power_save
+```
+
+Se a etapa anterior funcionou para você, mantenha essa configuração (caso contrário, o problema continuará após a reinicialização):
+
+```
+echo "options snd_hda_intel power_save=0" | Sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
 ```
 
 <h4>Ativar filtro de ruído no microfone</h4>
